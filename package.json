@@ -15,9 +15,14 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "react-app-rewired": "^1.5.2",
+    "ts-import-plugin": "^1.5.2"
   },
   "dependencies": {
+    "antd": "^3.6.2",
+    "babel-plugin-import": "^1.8.0",
+    "bulma": "^0.7.1",
     "express": "^4.15.4",
     "next": "^6.0.3",
     "react": "^16.4.1",

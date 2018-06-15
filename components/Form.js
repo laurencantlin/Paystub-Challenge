@@ -1,69 +1,29 @@
 import Link from 'next/link'
-import { Form, Icon, Input, Button } from 'antd';
-// import 'antd/lib/form/style/css';        // for css
-const FormItem = Form.Item;
+import {Row, Button, Input} from 'react-materialize'
 
-function hasErrors(fieldsError) {
-  return Object.keys(fieldsError).some(field => fieldsError[field]);
-}
 
 class EmployeeForm extends React.Component {
-  componentDidMount() {
-    // To disabled submit button at the beginning.
-    this.props.form.validateFields();
-  }
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
-  }
+  
+  
   render() {
-    const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = this.props.form;
-
-    // Only show error after a field is touched.
-    const userNameError = isFieldTouched('userName') && getFieldError('userName');
-    const passwordError = isFieldTouched('password') && getFieldError('password');
+    
     return (
-      <Form layout="inline" onSubmit={this.handleSubmit}>
-        <FormItem className="field " 
-          validateStatus={userNameError ? 'error' : ''}
-          help={userNameError || ''}
-        >
-          {getFieldDecorator('userName', {
-            rules: [{ required: true, message: 'Please input your username!' }],
-          })(
-            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
-          )}
-        </FormItem>
-        <FormItem
-          validateStatus={passwordError ? 'error' : ''}
-          help={passwordError || ''}
-        >
-          {getFieldDecorator('password', {
-            rules: [{ required: true, message: 'Please input your Password!' }],
-          })(
-            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
-          )}
-        </FormItem>
-        <FormItem>
-          <Button
-            type="primary"
-            htmlType="submit"
-            disabled={hasErrors(getFieldsError())}
-          >
-            Log in
-          </Button>
-        </FormItem>
-      </Form>
+        <Row>
+        <Input placeholder="John" s={12} label="First Name" onChange={this.props.FN}/>
+        <Input placeholder="Smith" s={12} label="Last Name" />
+        <Input s={12} label="Annual Salary" placeholder="$" />
+       
+        <Input type="number" label="Super Rate" s={12} placeholder="%" />
+        <Input placeholder="Pick Date" type="date" label="Pay Period Start Date" s={12} onChange={function(e, value) {}}/>
+        <Button waves='light'>Submit</Button>
+
+    </Row>
     );
   }
 }
 
-const WrappedHorizontalLoginForm = Form.create()(EmployeeForm);
+// const WrappedHorizontalLoginForm = Form.create()(EmployeeForm);
 
 // ReactDOM.render(<WrappedHorizontalLoginForm />, mountNode);
 
-export default WrappedHorizontalLoginForm
+export default EmployeeForm

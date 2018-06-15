@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "build": "next build",
     "test": "mocha",
     "dev": "next"

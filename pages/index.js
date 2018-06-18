@@ -1,33 +1,22 @@
-// This is the Link API
 import Link from 'next/link'
-// import Header from "../components/Header"
 import Head from 'next/head'
 import EmployeeForm from '../components/Form';
 import WrappedHorizontalLoginForm from '../components/Form';
 import Hero from '../components/Hero';
-// import '../static/App.css'; import '../static/App.css';
-class Index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: ''
-    };
+import Wrapper from '../components/Wrapper';
+import Router from 'next/router'
 
-    this.FN = this.FN.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  FN(event) {
-    this.setState({fn: event.target.value});
-    console.log("hi")
-  }
-  handleSubmit(event){}
+import Context from '../config/Context';
+import ContextProvider from '../provider/ContextProvider'
+
+class Index extends React.Component {
 
   render() {
 
     return (
       <div>
         <Head>
-          <title>Form</title>
+          <title>index</title>
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
@@ -41,9 +30,11 @@ class Index extends React.Component {
           <div className="columns is-centered">
             <div className="column is-half ">
               <div className="box">
-
-                <EmployeeForm FN={this.state.FN} ></EmployeeForm>
-
+                <Wrapper>
+                  <EmployeeForm 
+                  onSubmit={() => Router.push('/Paystub')}
+                  />
+                </Wrapper>
               </div>
             </div>
           </div>

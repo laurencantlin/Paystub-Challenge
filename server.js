@@ -31,7 +31,9 @@ app.prepare()
     server.get('/index', (req, res) => {
       return app.render(req, res, '/', req.query)
     })
-
+    // server.get('/Home', (req, res) => {
+    //   return app.render(req, res, '/Home', req.query)
+    // })
     server.get('/Paystub', (req, res) => {
       return app.render(req, res, '/Paystub', req.query)
     })

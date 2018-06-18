@@ -3,6 +3,7 @@ import Header from "../components/Header"
 import Head from 'next/head' 
 import Hero from '../components/Hero';
 import Slip from '../components/Table';
+import Wrapper from '../components/Wrapper';
 
 class Paystub extends Component {
     
@@ -25,8 +26,8 @@ class Paystub extends Component {
     <div className="columns is-centered">
     <div className="column is-half ">
     <div className="box">
-<Slip></Slip>
-    
+{/* <Slip></Slip> */}
+    <Wrapper><Slip></Slip></Wrapper>
     </div>
     </div>
     </div>

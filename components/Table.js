@@ -53,9 +53,9 @@ class Slip extends React.Component {
   renderSuper = (gross,supr) => {
     const suprRate=supr/100
     console.log(gross, suprRate);
-    const Supr = gross*suprRate
+    const Supr = (gross*suprRate)
     // const Gross = income / 12 return Gross
-    return Supr
+    return Math.floor(Supr)
   }
   render() {
 
@@ -80,7 +80,7 @@ class Slip extends React.Component {
 
                 <tbody>
                 <tr>
-                    <td data-field="id">Annual Income:  </td>
+                    <td data-field="id">Annual Salary:  </td>
                     {/* <th data-field="name"></th> */}
                     <td data-field="Pay Period" className="has-text-right">
                       ${context.state.AnnualSalary}
@@ -91,23 +91,23 @@ class Slip extends React.Component {
 
                   </tr>
                   <tr>
-                    <td>Gross Income:</td>
+                    <td>Gross Income (monthly):</td>
                     {/* <td></td> */}
-                    <td className="has-text-right">${this.renderGross(context.state.AnnualSalary)} monthly</td>
+                    <td className="has-text-right">${this.renderGross(context.state.AnnualSalary)} </td>
                   </tr>
                   <tr>
-                    <td>Income Tax:</td>
+                    <td>Income Tax (monthly):</td>
                     {/* <td></td> */}
-                    <td className="has-text-right">- ${this.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets)} monthly</td>
+                    <td className="has-text-right">- ${this.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets)} </td>
                   </tr>
                   <tr>
-                    <td>Net Income:</td>
+                    <td>Net Income (monthly): </td>
                     {/* <td></td> */}
                     <td className="has-text-right">${this.renderNetIncome(
                       this.renderIncomeTax(
                         context.state.AnnualSalary, context.state.TaxBrackets
                       ), this.renderGross(context.state.AnnualSalary)
-                    )} monthly</td>
+                    )} </td>
                   </tr>
                   <tr>
                     <td>Super Amount:</td>

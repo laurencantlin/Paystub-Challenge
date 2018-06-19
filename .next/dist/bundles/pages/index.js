@@ -170,14 +170,12 @@ function (_React$Component) {
       writable: true,
       value: function value(event, _value, setName) {
         event.preventDefault();
-
-        if (_this.state.fn && _this.state.ln && _this.state.AnnualSalary && _this.state.Super && _this.state.PeriodStart) {
-          console.log(_this.state, "sub");
-          event.preventDefault();
-          __WEBPACK_IMPORTED_MODULE_4_next_router___default.a.push('/Paystub');
-        } else {
-          alert("fill out all fields");
-        }
+        __WEBPACK_IMPORTED_MODULE_4_next_router___default.a.push('/Paystub'); // if(this.state.fn&&this.state.ln&&this.state.AnnualSalary&&this.state.Super&&this.state.PeriodStart){
+        //   console.log(this.state, "sub")
+        //   event.preventDefault();
+        //  Router.push('/Paystub')
+        // }
+        // else{alert("fill out all fields")}
       }
     }), Object.defineProperty(_assertThisInitialized(_this), "handlefnChange", {
       configurable: true,
@@ -279,6 +277,7 @@ function (_React$Component) {
           required: true,
           s: 12,
           type: "number",
+          step: "5000",
           label: "Annual Salary",
           placeholder: "$",
           onChange: function onChange(event) {
@@ -290,9 +289,10 @@ function (_React$Component) {
           type: "number",
           s: 12,
           min: "0",
-          max: "100",
+          max: "12",
           placeholder: "%",
           step: "1",
+          maxlength: "2",
           onChange: function onChange(event) {
             return _this2.handleSuperChange(event.target.value, context.methods.setSuper);
           }
@@ -306,7 +306,8 @@ function (_React$Component) {
             return _this2.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart);
           }
         }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_materialize__["Button"], {
-          onClick: function onClick(event) {
+          type: "submit",
+          onSubmit: function onSubmit(event) {
             return _this2.handleSubmit(event, event.target.value, context.methods.setName);
           },
           waves: "light"
@@ -383,7 +384,7 @@ function (_React$Component) {
 
   _createClass(Hero, [{
     key: "render",
-    value: function render() {
+    value: function render(props) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
         className: "hero is-fullheight is-primary"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
@@ -392,9 +393,9 @@ function (_React$Component) {
         className: "container"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
         className: "title"
-      }, "Employee Details"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
+      }, this.props.title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
         className: "subtitle"
-      }, "Please fill out the form below"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null), this.props.children)));
+      }, this.props.subtitle), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null), this.props.children)));
     }
   }]);
 
@@ -572,7 +573,7 @@ function (_React$Component) {
         console.log(gross, suprRate);
         var Supr = gross * suprRate; // const Gross = income / 12 return Gross
 
-        return Supr;
+        return Math.floor(Supr);
       }
     }), _temp));
   }
@@ -604,16 +605,16 @@ function (_React$Component) {
           className: "has-text-right"
         }, _this2.renderDate(context.state.PeriodStart), "- ", _this2.renderDate(context.state.PeriodEnd)))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
           "data-field": "id"
-        }, "Annual Income:  "), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
+        }, "Annual Salary:  "), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
           "data-field": "Pay Period",
           className: "has-text-right"
-        }, "$", context.state.AnnualSalary)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Gross Income:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
+        }, "$", context.state.AnnualSalary)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Gross Income (monthly):"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
           className: "has-text-right"
-        }, "$", _this2.renderGross(context.state.AnnualSalary), " monthly")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Income Tax:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
+        }, "$", _this2.renderGross(context.state.AnnualSalary), " ")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Income Tax (monthly):"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
           className: "has-text-right"
-        }, "- $", _this2.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets), " monthly")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Net Income:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
+        }, "- $", _this2.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets), " ")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Net Income (monthly): "), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
           className: "has-text-right"
-        }, "$", _this2.renderNetIncome(_this2.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets), _this2.renderGross(context.state.AnnualSalary)), " monthly")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Super Amount:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
+        }, "$", _this2.renderNetIncome(_this2.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets), _this2.renderGross(context.state.AnnualSalary)), " ")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Super Amount:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
           className: "has-text-right"
         }, "$", _this2.renderSuper(_this2.renderGross(context.state.AnnualSalary), context.state.Super)))))));
       });
@@ -697,16 +698,8 @@ function (_React$Component) {
   }
 
   _createClass(Index, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {} // console.log("indexpage mounted", ContextProvider, MyContext)
-    // componentDidUpdate() {
-    //   console.log("indexpage updated:",this.state, )
-    // }
-
-  }, {
     key: "render",
     value: function render() {
-      // const {Component, pageProps} = this.props;
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_next_head___default.a, null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", null, "index"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"
@@ -716,15 +709,16 @@ function (_React$Component) {
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
         name: "viewport",
         content: "initial-scale=1.0, width=device-width"
-      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Hero__["a" /* default */], null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+      })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Hero__["a" /* default */], {
+        title: "Employee Details",
+        subtitle: "Please fill out the form below"
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "columns is-centered"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "column is-half "
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "box"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Form__["a" /* default */], null))))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "container"
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Form__["a" /* default */], null))))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
         src: "https://code.jquery.com/jquery-2.1.1.min.js"
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
         src: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"

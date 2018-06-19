@@ -24,13 +24,14 @@ class EmployeeForm extends React.Component {
 
   handleSubmit=(event, value, setName)=> {
     event.preventDefault();
+    Router.push('/Paystub')
 
-    if(this.state.fn&&this.state.ln&&this.state.AnnualSalary&&this.state.Super&&this.state.PeriodStart){
-      console.log(this.state, "sub")
-      event.preventDefault();
-     Router.push('/Paystub')
-    }
-    else{alert("fill out all fields")}
+    // if(this.state.fn&&this.state.ln&&this.state.AnnualSalary&&this.state.Super&&this.state.PeriodStart){
+    //   console.log(this.state, "sub")
+    //   event.preventDefault();
+    //  Router.push('/Paystub')
+    // }
+    // else{alert("fill out all fields")}
   }
  
   // calculatePaystub = () => {
@@ -85,14 +86,14 @@ class EmployeeForm extends React.Component {
                   <Button onClick={context.methods.increaseAge}>🔼</Button>
                   {/* {({submitForm}) => ( */
                 } 
-                < form onSubmit = {
+                < form  onSubmit = {
                   this.handleSubmit
                 } > 
                 <Row>
-                  <Input placeholder="John" required	 s={12} onChange= {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
-                  <Input placeholder="Smith" required	 s={12} label="Last Name" onChange= {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
-                  <Input required	 s={12} type ="number" label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
-                  <Input required	 label="Super Rate" type="number" s={12} min='0' max='100'placeholder="%" step="1" onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
+                  <Input placeholder="John" required 	 s={12} onChange= {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
+                  <Input placeholder="Smith" required s={12} label="Last Name" onChange= {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
+                  <Input required	 s={12} type ="number" step='5000' label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
+                  <Input required	 label="Super Rate" type="number" s={12} min='0' max='12' placeholder="%" step="1" maxlength='2' onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
                   <Input required	
                     placeholder="Pick Date"
                     type="date" 
@@ -100,7 +101,7 @@ class EmployeeForm extends React.Component {
                     s={12}
                     onChange= {event => this.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart)}/>
 
-                  <Button  onClick={(event) => this.handleSubmit(event, event.target.value, context.methods.setName)} waves='light'>Submit</Button>
+                  <Button  type="submit"  onSubmit={(event) => this.handleSubmit(event, event.target.value, context.methods.setName)} waves='light'>Submit</Button>
                   {/* <Input */}
                     {/* type="text"
                     value={this.state.input}

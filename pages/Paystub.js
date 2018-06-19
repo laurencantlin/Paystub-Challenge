@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Header from "../components/Header"
 import Head from 'next/head' 
 import Hero from '../components/Hero';
 import Slip from '../components/Table';
@@ -28,7 +27,7 @@ class Paystub extends Component {
 
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <Hero>
+    <Hero title="Employee Paystub" subtitle="See paystub below.">
     <div className="columns is-centered">
     <div className="column is-half ">
     <div className="box">

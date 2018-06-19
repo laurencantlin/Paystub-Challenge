@@ -52,6 +52,7 @@ export default class MyApp extends App {
       const startD = new Date(start[0] + start[1] + start[2])
 
       const endD = new Date(moment(startD).add(1, 'months').calendar())
+      console.log(startD, endD)
       // console.log(startD,endD)
       this.setState({PeriodStart: startD})
       this.setState({PeriodEnd: endD})

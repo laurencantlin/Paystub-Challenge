@@ -5,17 +5,17 @@ import EmployeeForm from './Form'
 class Hero extends React.Component {
   
   
-  render() {
+  render(props) {
     
     return (
         <section className="hero is-fullheight is-primary">
         <div className="hero-body has-text-centered is-centered">
           <div className="container">
             <h1 className="title">
-              Employee Details
+              {this.props.title}
             </h1>
             <h2 className="subtitle">
-              Please fill out the form below
+            {this.props.subtitle}
             </h2>
             <br/>
             {this.props.children}

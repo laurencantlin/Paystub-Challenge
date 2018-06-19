@@ -223,7 +223,8 @@ function (_App) {
         setPeriodStart: function setPeriodStart(value) {
           var start = value.split(",").join("").split(" ");
           var startD = new Date(start[0] + start[1] + start[2]);
-          var endD = new Date(__WEBPACK_IMPORTED_MODULE_3_moment___default()(startD).add(1, 'months').calendar()); // console.log(startD,endD)
+          var endD = new Date(__WEBPACK_IMPORTED_MODULE_3_moment___default()(startD).add(1, 'months').calendar());
+          console.log(startD, endD); // console.log(startD,endD)
 
           _this.setState({
             PeriodStart: startD

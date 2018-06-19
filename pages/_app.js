@@ -23,7 +23,12 @@ export default class MyApp extends App {
       newPaystub: this
         .newPaystub
         .bind(this)
-    }
+    },
+    fn: 'fna',
+      ln: 'lna',
+      AnnualSalary: 0,
+      Super: 0,
+      PeriodStart: "mmddyyyy",
   };
   methods = {
     setFN: (value) => this.setState({fn: value}),
@@ -40,11 +45,11 @@ export default class MyApp extends App {
         employeePaystub:{paystub}
     })
   }
+componentDidUpdate(){
+  console.log("mounted", this.state)
+}
 
-
-  render()
-  {
-    const {Component, pageProps} = this.props;
+  render() {const {Component, pageProps} = this.props;
 
     return (
       <Container>

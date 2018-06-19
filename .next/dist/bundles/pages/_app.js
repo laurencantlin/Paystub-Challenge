@@ -67,43 +67,56 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
 
-/***/ "./config/Context.js":
+module.exports = require("react");
+
+/***/ }),
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
  // import {createContext} from 'react'
 
-var MyContext = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext({
-  payslips: [],
-  addPayslip: function addPayslip(payslip) {}
-});
+var MyContext = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext();
 /* harmony default export */ __webpack_exports__["a"] = (MyContext);
 
 /***/ }),
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ "./pages/_app.js":
+module.exports = __webpack_require__(12);
+
+
+/***/ }),
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_next_app__ = __webpack_require__("next/app");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_next_app__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_next_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_next_app__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_Context__ = __webpack_require__("./config/Context.js");
-var _jsxFileName = "/Users/laurencantlin/Desktop/Code/Paystub-Challenge/pages/_app.js";
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_Context__ = __webpack_require__(1);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -187,7 +200,12 @@ function (_App) {
         employeePaystub: {
           paystub: {},
           newPaystub: _this.newPaystub.bind(_assertThisInitialized(_this))
-        }
+        },
+        fn: 'fna',
+        ln: 'lna',
+        AnnualSalary: 0,
+        Super: 0,
+        PeriodStart: "mmddyyyy"
       }
     }), Object.defineProperty(_assertThisInitialized(_this), "methods", {
       configurable: true,
@@ -244,31 +262,22 @@ function (_App) {
       });
     }
   }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      console.log("mounted", this.state);
+    }
+  }, {
     key: "render",
     value: function render() {
       var _props = this.props,
           Component = _props.Component,
           pageProps = _props.pageProps;
-      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_next_app__["Container"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__config_Context__["a" /* default */].Provider, {
+      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_next_app__["Container"], null, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__config_Context__["a" /* default */].Provider, {
         value: {
           state: this.state,
           methods: this.methods
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
         }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Component, _extends({}, pageProps, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        }
-      }))));
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Component, pageProps)));
     }
   }]);
 
@@ -278,28 +287,10 @@ function (_App) {
 
 
 /***/ }),
-
-/***/ 0:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("./pages/_app.js");
-
-
-/***/ }),
-
-/***/ "next/app":
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("next/app");
 
-/***/ }),
-
-/***/ "react":
-/***/ (function(module, exports) {
-
-module.exports = require("react");
-
 /***/ })
-
-/******/ });
-//# sourceMappingURL=_app.js.map
+/******/ ]);

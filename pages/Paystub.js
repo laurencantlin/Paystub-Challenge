@@ -4,10 +4,10 @@ import Head from 'next/head'
 import Hero from '../components/Hero';
 import Slip from '../components/Table';
 import Wrapper from '../components/Wrapper';
-
+import Stub from '../components/Stub'
 class Paystub extends Component {
     componentDidMount() {
-        console.log(this.state)
+        console.log("paytstubpage mounted",this.state)
       }
       componentDidUpdate() {
         console.log(this.state)
@@ -32,8 +32,9 @@ class Paystub extends Component {
     <div className="columns is-centered">
     <div className="column is-half ">
     <div className="box">
-    {/* <Wrapper><Slip></Slip></Wrapper> */}
-    <Slip></Slip>
+    <Wrapper><Slip></Slip></Wrapper>
+    {/* <Slip></Slip> */}
+    {/* <Stub></Stub> */}
     </div>
     </div>
     </div>

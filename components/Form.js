@@ -5,31 +5,35 @@ import MyProvider from '../provider/ContextProvider'
 import Router from 'next/router'
 
 class EmployeeForm extends React.Component {
-  //   state={     name:'wes',     FN: 'fn',     LN: 'ln',     AnnualSalary: 0,
-  // SuperRate: 0,     PayPeriodStart: "mmddyyyy",     age: 100,     cool: true }
-  state = {
-    // input: this.DEFAULT
-  };
+    state={     
+      name:'wes',
+      fn: 'fn',
+      ln: 'ln',    
+      AnnualSalary: 0,
+    Super: 0,       
+    PeriodStart: "mmddyyyy",     age: 100,     cool: true }
+  // state = {
+  //   input: this.DEFAULT
+  // };
   componentDidMount() {
-    console.log(this.state)
+    console.log("form component mounted")
   }
+
   componentDidUpdate() {
-    console.log(this.state)
+    console.log("Form component updated:", this.state )
   }
-  
 
   handleSubmit=(event, value, setName)=> {
     console.log(this.state.MyContext)
     event.preventDefault();
-    const newState=this.state
 
    Router.push('/Paystub')
   }
-  handleKeyPress(value, setName) {
-    this.setState({
-      input: value
-    }, () => setName(this.state.input))
-  }
+  // handleKeyPress(value, setName) {
+  //   this.setState({
+  //     input: value
+  //   }, () => setName(this.state.input))
+  // }
 
   handlefnChange = (value, setFN) => {
     // console.log(e.target.value)
@@ -65,49 +69,50 @@ class EmployeeForm extends React.Component {
 
     return (
       <MyContext.Consumer>
-        {/* {({newPaystub})=>()} */}
-        {(context) => (
-          <React.Fragment>
-            <div>fn: {context.state.fn} ,<br/>
-              ln: {context.state.ln} ,<br/>
-              AnnualSalary: {context.state.AnnualSalary} ,<br/>
-              Super: {context.state.Super} ,<br/>
-              PeriodStart: {context.state.PeriodStart} ,<br/>
-              age {context.state.age}
-              <Button onClick={context.methods.increaseAge}>🔼</Button>
-              {/* {({submitForm}) => ( */
-            } 
-            < form onSubmit = {
-              this.handleSubmit
-            } > 
-            <Row>
-              <Input placeholder="John" s={12} onChange= {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
-              <Input placeholder="Smith" s={12} label="Last Name" onChange= {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
-              <Input s={12} type ="number" label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
-              <Input label="Super Rate" s={12} placeholder="%" onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
-              <Input
-                placeholder="Pick Date"
-                type="date"
-                label="Pay Period Start Date"
-                s={12}
-                onChange= {event => this.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart)}/>
+        {/* <div className="form"> */}
+          {(context) => (
+              <React.Fragment>
+                <div>
+                  {/* fn: {context.fn} ,<br/>
+                  ln: {context.state.ln} ,<br/>
+                  AnnualSalary: {context.state.AnnualSalary} ,<br/>
+                  Super: {context.state.Super} ,<br/>
+                  PeriodStart: {context.state.PeriodStart} ,<br/>
+                  age {context.state.age}
+                  <Button onClick={context.methods.increaseAge}>🔼</Button>
+                  {/* {({submitForm}) => ( */
+                }  */}
+                < form onSubmit = {
+                  this.handleSubmit
+                } > 
+                <Row>
+                  <Input placeholder="John" s={12} onChange= {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
+                  <Input placeholder="Smith" s={12} label="Last Name" onChange= {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
+                  <Input s={12} type ="number" label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
+                  <Input label="Super Rate" s={12} placeholder="%" onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
+                  {/* <Input
+                    placeholder="Pick Date"
+                    type="date"
+                    label="Pay Period Start Date"
+                    s={12}
+                    onChange= {event => this.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart)}/> */}
 
-              <Button  onClick={event => this.handleSubmit(event, event.target.value, context.methods.setName)} waves='light'>Submit</Button>
-              <Input
-                type="text"
-                value={this.state.input}
-                onChange={event => this.handleKeyPress(event.target.value, context.methods.setName)}
-                placeholder="Change name..."/> 
+                  <Button  onClick={(event) => this.handleSubmit(event, event.target.value, context.methods.setName)} waves='light'>Submit</Button>
+                  {/* <Input */}
+                    {/* type="text"
+                    value={this.state.input}
+                    onChange={event => this.handleKeyPress(event.target.value, context.methods.setName)}
+                    placeholder="Change name..."/>  */}
 
-            </Row> 
-            </form>
-           
-            </div>
+                </Row> 
+                </form>
+              
+                </div>
 
-          </React.Fragment>
-        )}
+              </React.Fragment>
+            )}
+  {/* </div>   */}
       </MyContext.Consumer>
-
     );
   }
 }

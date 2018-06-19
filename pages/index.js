@@ -2,17 +2,11 @@ import React from 'react';
 import Link from 'next/link'
 import Head from 'next/head'
 import EmployeeForm from '../components/Form';
-import WrappedHorizontalLoginForm from '../components/Form';
 import Hero from '../components/Hero';
 import Wrapper from '../components/Wrapper';
 import Router from 'next/router'
-
-import Context from '../config/Context';
-import ContextProvider from '../provider/ContextProvider'
 import Slip from '../components/Table';
-import Test from '../components/Test';
 import MyContext from '../config/Context';
-import MyProvider from '../provider/ContextProvider';
 
 class Index extends React.Component {
   componentDidMount() {

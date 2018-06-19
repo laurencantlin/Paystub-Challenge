@@ -1,12 +1,7 @@
 import React from 'react';
-import Link from 'next/link'
 import Head from 'next/head'
 import EmployeeForm from '../components/Form';
 import Hero from '../components/Hero';
-import Wrapper from '../components/Wrapper';
-import Router from 'next/router'
-import Slip from '../components/Table';
-import MyContext from '../config/Context';
 
 class Index extends React.Component {
 

@@ -3,14 +3,7 @@ import {Table} from 'react-materialize'
 import MyContext from '../config/Context'
 import moment from 'moment'
 class Slip extends React.Component {
-  componentDidMount() {
-    console.log(this.state)
-    this.renderDate()
-    this.renderGross()
-  }
-  componentDidUpdate() {
-    console.log(this.state)
-  }
+  
   renderDate = (cts) => {
     console.log("cts", moment(cts).format('ll'))
     const formattedDate = moment(cts).format('ll')
@@ -25,10 +18,8 @@ class Slip extends React.Component {
       .toUpperCase()}${ln
       .slice(1)} `
     console.log(this.state)
-    // this.setState({employeeName:employeeName})
     return employeeName
   }
-
   renderGross = (income) => {
     console.log(income);
     const Gross = Math.floor(income / 12)
@@ -40,7 +31,6 @@ class Slip extends React.Component {
       if (bracket.startingAt < income && income < bracket.upto) {
         console.log("mybracket is", bracket)
         incomeTax = Math.floor((bracket.baseTax + bracket.taxRate * (income - bracket.startingAt)) / 12);
-        console.log(incomeTax)
       }
     })
     return incomeTax;
@@ -52,57 +42,43 @@ class Slip extends React.Component {
   }
   renderSuper = (gross,supr) => {
     const suprRate=supr/100
-    console.log(gross, suprRate);
     const Supr = (gross*suprRate)
-    // const Gross = income / 12 return Gross
     return Math.floor(Supr)
   }
   render() {
-
     return (
       <MyContext.Consumer>
         {(context) => (
           <React.Fragment>
-
             <div className="container">
               <Table>
                 <thead>
-
                   <tr>
                     <th data-field="id">{this.renderName(context.state.fn, context.state.ln)}</th>
-                    {/* <th data-field="name"></th> */}
                     <th data-field="Pay Period" className="has-text-right">
                       {this.renderDate(context.state.PeriodStart)}
                       - {this.renderDate(context.state.PeriodEnd)}
                     </th>
                   </tr>
                 </thead>
-
                 <tbody>
                 <tr>
                     <td data-field="id">Annual Salary:  </td>
-                    {/* <th data-field="name"></th> */}
                     <td data-field="Pay Period" className="has-text-right">
                       ${context.state.AnnualSalary}
                     </td>
                   </tr>
-                  <tr>
-                    <td></td>
-
-                  </tr>
+                  
                   <tr>
                     <td>Gross Income (monthly):</td>
-                    {/* <td></td> */}
                     <td className="has-text-right">${this.renderGross(context.state.AnnualSalary)} </td>
                   </tr>
                   <tr>
                     <td>Income Tax (monthly):</td>
-                    {/* <td></td> */}
                     <td className="has-text-right">- ${this.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets)} </td>
                   </tr>
                   <tr>
                     <td>Net Income (monthly): </td>
-                    {/* <td></td> */}
                     <td className="has-text-right">${this.renderNetIncome(
                       this.renderIncomeTax(
                         context.state.AnnualSalary, context.state.TaxBrackets
@@ -110,8 +86,7 @@ class Slip extends React.Component {
                     )} </td>
                   </tr>
                   <tr>
-                    <td>Super Amount:</td>
-                    {/* <td></td> */}
+                    <td>Super ({context.state.Super}% monthly):</td>
                     <td className="has-text-right">${this.renderSuper(this.renderGross(context.state.AnnualSalary), context.state.Super)}</td>
                   </tr>
                 </tbody>
@@ -123,10 +98,5 @@ class Slip extends React.Component {
     );
   }
 }
-
-// const WrappedHorizontalLoginForm = Form.create()(EmployeeForm);
-// ReactDOM.render(<WrappedHorizontalLoginForm />, mountNode); const
-// WrappedHorizontalLoginForm = Form.create()(EmployeeForm);
-// ReactDOM.render(<WrappedHorizontalLoginForm />, mountNode);
 
 export default Slip

@@ -68,7 +68,7 @@ class Slip extends React.Component {
                       ${context.state.AnnualSalary}
                     </td>
                   </tr>
-                  
+                
                   <tr>
                     <td>Gross Income (monthly):</td>
                     <td className="has-text-right">${this.renderGross(context.state.AnnualSalary)} </td>

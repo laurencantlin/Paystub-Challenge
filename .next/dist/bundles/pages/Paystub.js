@@ -172,7 +172,10 @@ function (_React$Component) {
       writable: true,
       value: function value(event, _value, setName) {
         event.preventDefault();
-        __WEBPACK_IMPORTED_MODULE_3_next_router___default.a.push('/Paystub');
+
+        if (_this.state.PeriodStart) {
+          __WEBPACK_IMPORTED_MODULE_3_next_router___default.a.push('/Paystub');
+        }
       }
     }), Object.defineProperty(_assertThisInitialized(_this), "handlefnChange", {
       configurable: true,
@@ -223,10 +226,7 @@ function (_React$Component) {
       enumerable: true,
       writable: true,
       value: function value(_value6, setPeriodStart) {
-        console.log(_value6); // let start=value.split(",").join("").split(" ")   
-        // console.log(start, `${start[0]} ${start[1]} ${start[2]}`)
-        // let startD = new Date(`${start[0]} ${start[1]} ${start[2]}`)   
-        // console.log(startD)
+        console.log(_value6);
 
         _this.setState({
           PeriodStart: _value6

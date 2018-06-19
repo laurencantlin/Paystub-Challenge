@@ -14,7 +14,10 @@ class EmployeeForm extends React.Component {
 
   handleSubmit=(event, value, setName)=> {
     event.preventDefault();
-    Router.push('/Paystub')
+    if(this.state.PeriodStart){
+      Router.push('/Paystub')
+
+    }   
   }
  
   handlefnChange = (value, setFN) => {
@@ -39,10 +42,7 @@ class EmployeeForm extends React.Component {
   }
   handlePeriodStartChange = (value, setPeriodStart) => {
     console.log(value)
-    // let start=value.split(",").join("").split(" ")   
-    // console.log(start, `${start[0]} ${start[1]} ${start[2]}`)
-    // let startD = new Date(`${start[0]} ${start[1]} ${start[2]}`)   
-    // console.log(startD)
+   
     this.setState({
       PeriodStart: value
     }, () => setPeriodStart(this.state.PeriodStart))

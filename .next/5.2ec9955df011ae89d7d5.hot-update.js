@@ -72,7 +72,10 @@ function (_React$Component) {
       writable: true,
       value: function value(event, _value, setName) {
         event.preventDefault();
-        __WEBPACK_IMPORTED_MODULE_3_next_router___default.a.push('/Paystub');
+
+        if (_this.state.PeriodStart) {
+          __WEBPACK_IMPORTED_MODULE_3_next_router___default.a.push('/Paystub');
+        }
       }
     }), Object.defineProperty(_assertThisInitialized(_this), "handlefnChange", {
       configurable: true,
@@ -123,10 +126,7 @@ function (_React$Component) {
       enumerable: true,
       writable: true,
       value: function value(_value6, setPeriodStart) {
-        console.log(_value6); // let start=value.split(",").join("").split(" ")   
-        // console.log(start, `${start[0]} ${start[1]} ${start[2]}`)
-        // let startD = new Date(`${start[0]} ${start[1]} ${start[2]}`)   
-        // console.log(startD)
+        console.log(_value6);
 
         _this.setState({
           PeriodStart: _value6
@@ -283,7 +283,233 @@ var _default = EmployeeForm;
 ;
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
+/***/ }),
+
+/***/ "./node_modules/react-materialize/lib/index.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Toast = exports.Tag = exports.Tabs = exports.Table = exports.Tab = exports.Slider = exports.Slide = exports.SideNavItem = exports.SideNav = exports.Section = exports.SearchForm = exports.Row = exports.ProgressBar = exports.Preloader = exports.Parallax = exports.PaginationButton = exports.Pagination = exports.Navbar = exports.NavItem = exports.Modal = exports.MenuItem = exports.MediaBox = exports.Input = exports.Icon = exports.Footer = exports.Dropdown = exports.Divider = exports.Container = exports.CollectionItem = exports.Collection = exports.CollapsibleItem = exports.Collapsible = exports.Col = exports.Chip = exports.CardTitle = exports.CardPanel = exports.Card = exports.Carousel = exports.Button = exports.Breadcrumb = exports.Badge = exports.Autocomplete = undefined;
+
+var _Autocomplete = __webpack_require__("./node_modules/react-materialize/lib/Autocomplete.js");
+
+var _Autocomplete2 = _interopRequireDefault(_Autocomplete);
+
+var _Badge = __webpack_require__("./node_modules/react-materialize/lib/Badge.js");
+
+var _Badge2 = _interopRequireDefault(_Badge);
+
+var _Breadcrumb = __webpack_require__("./node_modules/react-materialize/lib/Breadcrumb.js");
+
+var _Breadcrumb2 = _interopRequireDefault(_Breadcrumb);
+
+var _Button = __webpack_require__("./node_modules/react-materialize/lib/Button.js");
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _Carousel = __webpack_require__("./node_modules/react-materialize/lib/Carousel.js");
+
+var _Carousel2 = _interopRequireDefault(_Carousel);
+
+var _Card = __webpack_require__("./node_modules/react-materialize/lib/Card.js");
+
+var _Card2 = _interopRequireDefault(_Card);
+
+var _CardPanel = __webpack_require__("./node_modules/react-materialize/lib/CardPanel.js");
+
+var _CardPanel2 = _interopRequireDefault(_CardPanel);
+
+var _CardTitle = __webpack_require__("./node_modules/react-materialize/lib/CardTitle.js");
+
+var _CardTitle2 = _interopRequireDefault(_CardTitle);
+
+var _Chip = __webpack_require__("./node_modules/react-materialize/lib/Chip.js");
+
+var _Chip2 = _interopRequireDefault(_Chip);
+
+var _Col = __webpack_require__("./node_modules/react-materialize/lib/Col.js");
+
+var _Col2 = _interopRequireDefault(_Col);
+
+var _Collapsible = __webpack_require__("./node_modules/react-materialize/lib/Collapsible.js");
+
+var _Collapsible2 = _interopRequireDefault(_Collapsible);
+
+var _CollapsibleItem = __webpack_require__("./node_modules/react-materialize/lib/CollapsibleItem.js");
+
+var _CollapsibleItem2 = _interopRequireDefault(_CollapsibleItem);
+
+var _Collection = __webpack_require__("./node_modules/react-materialize/lib/Collection.js");
+
+var _Collection2 = _interopRequireDefault(_Collection);
+
+var _CollectionItem = __webpack_require__("./node_modules/react-materialize/lib/CollectionItem.js");
+
+var _CollectionItem2 = _interopRequireDefault(_CollectionItem);
+
+var _Container = __webpack_require__("./node_modules/react-materialize/lib/Container.js");
+
+var _Container2 = _interopRequireDefault(_Container);
+
+var _Divider = __webpack_require__("./node_modules/react-materialize/lib/Divider.js");
+
+var _Divider2 = _interopRequireDefault(_Divider);
+
+var _Dropdown = __webpack_require__("./node_modules/react-materialize/lib/Dropdown.js");
+
+var _Dropdown2 = _interopRequireDefault(_Dropdown);
+
+var _Footer = __webpack_require__("./node_modules/react-materialize/lib/Footer.js");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _Icon = __webpack_require__("./node_modules/react-materialize/lib/Icon.js");
+
+var _Icon2 = _interopRequireDefault(_Icon);
+
+var _Input = __webpack_require__("./node_modules/react-materialize/lib/Input.js");
+
+var _Input2 = _interopRequireDefault(_Input);
+
+var _MediaBox = __webpack_require__("./node_modules/react-materialize/lib/MediaBox.js");
+
+var _MediaBox2 = _interopRequireDefault(_MediaBox);
+
+var _MenuItem = __webpack_require__("./node_modules/react-materialize/lib/MenuItem.js");
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
+var _Modal = __webpack_require__("./node_modules/react-materialize/lib/Modal.js");
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
+var _NavItem = __webpack_require__("./node_modules/react-materialize/lib/NavItem.js");
+
+var _NavItem2 = _interopRequireDefault(_NavItem);
+
+var _Navbar = __webpack_require__("./node_modules/react-materialize/lib/Navbar.js");
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
+
+var _Pagination = __webpack_require__("./node_modules/react-materialize/lib/Pagination.js");
+
+var _Pagination2 = _interopRequireDefault(_Pagination);
+
+var _PaginationButton = __webpack_require__("./node_modules/react-materialize/lib/PaginationButton.js");
+
+var _PaginationButton2 = _interopRequireDefault(_PaginationButton);
+
+var _Parallax = __webpack_require__("./node_modules/react-materialize/lib/Parallax.js");
+
+var _Parallax2 = _interopRequireDefault(_Parallax);
+
+var _Preloader = __webpack_require__("./node_modules/react-materialize/lib/Preloader.js");
+
+var _Preloader2 = _interopRequireDefault(_Preloader);
+
+var _ProgressBar = __webpack_require__("./node_modules/react-materialize/lib/ProgressBar.js");
+
+var _ProgressBar2 = _interopRequireDefault(_ProgressBar);
+
+var _Row = __webpack_require__("./node_modules/react-materialize/lib/Row.js");
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _SearchForm = __webpack_require__("./node_modules/react-materialize/lib/SearchForm.js");
+
+var _SearchForm2 = _interopRequireDefault(_SearchForm);
+
+var _Section = __webpack_require__("./node_modules/react-materialize/lib/Section.js");
+
+var _Section2 = _interopRequireDefault(_Section);
+
+var _SideNav = __webpack_require__("./node_modules/react-materialize/lib/SideNav.js");
+
+var _SideNav2 = _interopRequireDefault(_SideNav);
+
+var _SideNavItem = __webpack_require__("./node_modules/react-materialize/lib/SideNavItem.js");
+
+var _SideNavItem2 = _interopRequireDefault(_SideNavItem);
+
+var _Slide = __webpack_require__("./node_modules/react-materialize/lib/Slide.js");
+
+var _Slide2 = _interopRequireDefault(_Slide);
+
+var _Slider = __webpack_require__("./node_modules/react-materialize/lib/Slider.js");
+
+var _Slider2 = _interopRequireDefault(_Slider);
+
+var _Tab = __webpack_require__("./node_modules/react-materialize/lib/Tab.js");
+
+var _Tab2 = _interopRequireDefault(_Tab);
+
+var _Table = __webpack_require__("./node_modules/react-materialize/lib/Table.js");
+
+var _Table2 = _interopRequireDefault(_Table);
+
+var _Tabs = __webpack_require__("./node_modules/react-materialize/lib/Tabs.js");
+
+var _Tabs2 = _interopRequireDefault(_Tabs);
+
+var _Tag = __webpack_require__("./node_modules/react-materialize/lib/Tag.js");
+
+var _Tag2 = _interopRequireDefault(_Tag);
+
+var _Toast = __webpack_require__("./node_modules/react-materialize/lib/Toast.js");
+
+var _Toast2 = _interopRequireDefault(_Toast);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Autocomplete = _Autocomplete2.default;
+exports.Badge = _Badge2.default;
+exports.Breadcrumb = _Breadcrumb2.default;
+exports.Button = _Button2.default;
+exports.Carousel = _Carousel2.default;
+exports.Card = _Card2.default;
+exports.CardPanel = _CardPanel2.default;
+exports.CardTitle = _CardTitle2.default;
+exports.Chip = _Chip2.default;
+exports.Col = _Col2.default;
+exports.Collapsible = _Collapsible2.default;
+exports.CollapsibleItem = _CollapsibleItem2.default;
+exports.Collection = _Collection2.default;
+exports.CollectionItem = _CollectionItem2.default;
+exports.Container = _Container2.default;
+exports.Divider = _Divider2.default;
+exports.Dropdown = _Dropdown2.default;
+exports.Footer = _Footer2.default;
+exports.Icon = _Icon2.default;
+exports.Input = _Input2.default;
+exports.MediaBox = _MediaBox2.default;
+exports.MenuItem = _MenuItem2.default;
+exports.Modal = _Modal2.default;
+exports.NavItem = _NavItem2.default;
+exports.Navbar = _Navbar2.default;
+exports.Pagination = _Pagination2.default;
+exports.PaginationButton = _PaginationButton2.default;
+exports.Parallax = _Parallax2.default;
+exports.Preloader = _Preloader2.default;
+exports.ProgressBar = _ProgressBar2.default;
+exports.Row = _Row2.default;
+exports.SearchForm = _SearchForm2.default;
+exports.Section = _Section2.default;
+exports.SideNav = _SideNav2.default;
+exports.SideNavItem = _SideNavItem2.default;
+exports.Slide = _Slide2.default;
+exports.Slider = _Slider2.default;
+exports.Tab = _Tab2.default;
+exports.Table = _Table2.default;
+exports.Tabs = _Tabs2.default;
+exports.Tag = _Tag2.default;
+exports.Toast = _Toast2.default;
+
 /***/ })
 
 })
-//# sourceMappingURL=5.e0bf6ad43665950e0607.hot-update.js.map
+//# sourceMappingURL=5.2ec9955df011ae89d7d5.hot-update.js.map

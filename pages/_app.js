@@ -50,37 +50,15 @@ export default class MyApp extends App {
         .join("")
         .split(" ")
       const startD = new Date(start[0] + start[1] + start[2])
-
       const endD = new Date(moment(startD).add(1, 'months').calendar())
       console.log(startD, endD)
-      // console.log(startD,endD)
       this.setState({PeriodStart: startD})
       this.setState({PeriodEnd: endD})
     },
-    // setPeriod: (value) => {   const start = value     .split(",")     .join("")
-    // .split(" ")   const startD = new Date(start[0] + start[1] + start[2]) const
-    // endD = new Date(moment(startD).add(21, 'days'))   console.log(startD, endD)
-    // this.setState({PeriodStart: startD, PeriodEnd: endD}) },
-
-    setName: (value) => this.setState({name: value}),
-    increaseAge: () => this.setState({
-      age: ++this.state.age
-    }),
     setEmployeeName: () => this.setState({employeeName: `${this.state.fn} ${this.state.ln}`})
   }
-  newPaystub(paystub) {
-    console.log("newpaystub")
-    this.setState({employeePaystub: {
-        paystub
-      }})
-  }
-  componentDidMount() {
-    console.log("mounted", this.state)
-  }
-
   render() {
     const {Component, pageProps} = this.props;
-
     return (
       <Container>
         <MyContext.Provider

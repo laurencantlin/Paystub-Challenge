@@ -1,24 +1,17 @@
-import Link from 'next/link'
-import {Row, Input} from 'react-materialize'
-import EmployeeForm from './Form'
-
 class Hero extends React.Component {
-  
-  
+
   render(props) {
-    
     return (
-        <section className="hero is-fullheight is-primary">
+      <section className="hero is-fullheight is-primary">
         <div className="hero-body has-text-centered is-centered">
           <div className="container">
             <h1 className="title">
               {this.props.title}
             </h1>
             <h2 className="subtitle">
-            {this.props.subtitle}
+              {this.props.subtitle}
             </h2>
-            <br/>
-            {this.props.children}
+            <br/> {this.props.children}
 
           </div>
         </div>
@@ -26,9 +19,5 @@ class Hero extends React.Component {
     );
   }
 }
-
-// const WrappedHorizontalLoginForm = Form.create()(EmployeeForm);
-
-// ReactDOM.render(<WrappedHorizontalLoginForm />, mountNode);
 
 export default Hero

@@ -1,7 +1,5 @@
-import Link from 'next/link'
 import {Row, Button, Input} from 'react-materialize'
 import MyContext from '../config/Context';
-// import MyProvider from '../provider/ContextProvider'
 import Router from 'next/router'
 
 class EmployeeForm extends React.Component {
@@ -13,58 +11,33 @@ class EmployeeForm extends React.Component {
       Super: null,       
       PeriodStart: null,     
     }
-  componentDidMount() {
-    // console.log("form component mounted")
-  }
-
-  componentDidUpdate() {
-    console.log("Form component updated:", this.state )
-    // this.calculatePaystub()
-  }
 
   handleSubmit=(event, value, setName)=> {
     event.preventDefault();
     Router.push('/Paystub')
-
-    // if(this.state.fn&&this.state.ln&&this.state.AnnualSalary&&this.state.Super&&this.state.PeriodStart){
-    //   console.log(this.state, "sub")
-    //   event.preventDefault();
-    //  Router.push('/Paystub')
-    // }
-    // else{alert("fill out all fields")}
   }
  
-  // calculatePaystub = () => {
-  //   console.log("calc",this.state)
-  //   return <div>hi</div>
-
-  // }
   handlefnChange = (value, setFN) => {
-    // console.log(e.target.value)
     this.setState({
       fn: value
     }, () => setFN(this.state.fn))
   }
   handlelnChange = (value, setLN) => {
-    // console.log(e.target.value)
     this.setState({
       ln: value
     }, () => setLN(this.state.ln))
   }
   handleAnnualSalaryChange = (value, setAnnualSalary) => {
-    // console.log(e.target.value)
     this.setState({
       AnnualSalary: value
     }, () => setAnnualSalary(this.state.AnnualSalary))
   }
   handleSuperChange = (value, setSuper) => {
-    // console.log(e.target.value)
     this.setState({
       Super: value
     }, () => setSuper(this.state.Super))
   }
   handlePeriodStartChange = (value, setPeriodStart) => {
-    // console.log(e.target.value)
     this.setState({
       PeriodStart: value
     }, () => setPeriodStart(this.state.PeriodStart))
@@ -73,20 +46,10 @@ class EmployeeForm extends React.Component {
 
     return (
       <MyContext.Consumer>
-        {/* <div className="form"> */}
           {(context) => (
               <React.Fragment>
                 <div>
-                  {/* fn: {context.fn} ,<br/>
-                  ln: {context.state.ln} ,<br/>
-                  AnnualSalary: {context.state.AnnualSalary} ,<br/>
-                  Super: {context.state.Super} ,<br/>
-                  PeriodStart: {context.state.PeriodStart} ,<br/>
-                  age {context.state.age}
-                  <Button onClick={context.methods.increaseAge}>🔼</Button>
-                  {/* {({submitForm}) => ( */
-                } 
-                < form  onSubmit = {
+                  < form  onSubmit = {
                   this.handleSubmit
                 } > 
                 <Row>
@@ -102,20 +65,12 @@ class EmployeeForm extends React.Component {
                     onChange= {event => this.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart)}/>
 
                   <Button  type="submit"  onSubmit={(event) => this.handleSubmit(event, event.target.value, context.methods.setName)} waves='light'>Submit</Button>
-                  {/* <Input */}
-                    {/* type="text"
-                    value={this.state.input}
-                    onChange={event => this.handleKeyPress(event.target.value, context.methods.setName)}
-                    placeholder="Change name..."/>  */}
-
+                
                 </Row> 
                 </form>
-              
                 </div>
-
               </React.Fragment>
             )}
-  {/* </div>   */}
       </MyContext.Consumer>
     );
   }

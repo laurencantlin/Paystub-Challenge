@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -77,9 +77,7 @@ module.exports =
 module.exports = require("react");
 
 /***/ }),
-/* 1 */,
-/* 2 */,
-/* 3 */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91,37 +89,37 @@ var MyContext = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext();
 /* harmony default export */ __webpack_exports__["a"] = (MyContext);
 
 /***/ }),
-/* 4 */,
-/* 5 */
+/* 2 */,
+/* 3 */
 /***/ (function(module, exports) {
 
 module.exports = require("moment");
 
 /***/ }),
+/* 4 */,
+/* 5 */,
 /* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(10);
 
 
 /***/ }),
-/* 12 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_next_app__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_next_app__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_next_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_next_app__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_Context__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_Context__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -224,7 +222,7 @@ function (_App) {
           var start = value.split(",").join("").split(" ");
           var startD = new Date(start[0] + start[1] + start[2]);
           var endD = new Date(__WEBPACK_IMPORTED_MODULE_3_moment___default()(startD).add(1, 'months').calendar());
-          console.log(startD, endD); // console.log(startD,endD)
+          console.log(startD, endD);
 
           _this.setState({
             PeriodStart: startD
@@ -232,20 +230,6 @@ function (_App) {
 
           _this.setState({
             PeriodEnd: endD
-          });
-        },
-        // setPeriod: (value) => {   const start = value     .split(",")     .join("")
-        // .split(" ")   const startD = new Date(start[0] + start[1] + start[2]) const
-        // endD = new Date(moment(startD).add(21, 'days'))   console.log(startD, endD)
-        // this.setState({PeriodStart: startD, PeriodEnd: endD}) },
-        setName: function setName(value) {
-          return _this.setState({
-            name: value
-          });
-        },
-        increaseAge: function increaseAge() {
-          return _this.setState({
-            age: ++_this.state.age
           });
         },
         setEmployeeName: function setEmployeeName() {
@@ -258,21 +242,6 @@ function (_App) {
   }
 
   _createClass(MyApp, [{
-    key: "newPaystub",
-    value: function newPaystub(paystub) {
-      console.log("newpaystub");
-      this.setState({
-        employeePaystub: {
-          paystub: paystub
-        }
-      });
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log("mounted", this.state);
-    }
-  }, {
     key: "render",
     value: function render() {
       var _props = this.props,
@@ -293,7 +262,7 @@ function (_App) {
 
 
 /***/ }),
-/* 13 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("next/app");

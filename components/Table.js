@@ -56,7 +56,7 @@ class Slip extends React.Component {
                   <tr>
                     <th data-field="id">{this.renderName(context.state.fn, context.state.ln)}</th>
                     <th data-field="Pay Period" className="has-text-right">
-                      {this.renderDate(context.state.PeriodStart)}
+                      {this.renderDate(new Date(context.state.PeriodStart))}
                       - {this.renderDate(context.state.PeriodEnd)}
                     </th>
                   </tr>
@@ -68,7 +68,7 @@ class Slip extends React.Component {
                       ${context.state.AnnualSalary}
                     </td>
                   </tr>
-                
+                  
                   <tr>
                     <td>Gross Income (monthly):</td>
                     <td className="has-text-right">${this.renderGross(context.state.AnnualSalary)} </td>

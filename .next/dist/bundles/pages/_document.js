@@ -142,8 +142,6 @@ function (_Document) {
         src: "https://code.jquery.com/jquery-2.1.1.min.js"
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
         src: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
-        src: "path/to/your/bundle.js"
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], null), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], null), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "container"
       })));

@@ -223,6 +223,11 @@ function (_React$Component) {
       enumerable: true,
       writable: true,
       value: function value(_value6, setPeriodStart) {
+        console.log(_value6); // let start=value.split(",").join("").split(" ")   
+        // console.log(start, `${start[0]} ${start[1]} ${start[2]}`)
+        // let startD = new Date(`${start[0]} ${start[1]} ${start[2]}`)   
+        // console.log(startD)
+
         _this.setState({
           PeriodStart: _value6
         }, function () {
@@ -275,7 +280,7 @@ function (_React$Component) {
           max: "12",
           placeholder: "%",
           step: "1",
-          maxlength: "2",
+          maxLength: "2",
           onChange: function onChange(event) {
             return _this2.handleSuperChange(event.target.value, context.methods.setSuper);
           }
@@ -533,7 +538,7 @@ function (_React$Component) {
         }, _this2.renderName(context.state.fn, context.state.ln)), external__react__default.a.createElement("th", {
           "data-field": "Pay Period",
           className: "has-text-right"
-        }, _this2.renderDate(context.state.PeriodStart), "- ", _this2.renderDate(context.state.PeriodEnd)))), external__react__default.a.createElement("tbody", null, external__react__default.a.createElement("tr", null, external__react__default.a.createElement("td", {
+        }, _this2.renderDate(new Date(context.state.PeriodStart)), "- ", _this2.renderDate(context.state.PeriodEnd)))), external__react__default.a.createElement("tbody", null, external__react__default.a.createElement("tr", null, external__react__default.a.createElement("td", {
           "data-field": "id"
         }, "Annual Salary:  "), external__react__default.a.createElement("td", {
           "data-field": "Pay Period",
@@ -667,8 +672,6 @@ function (_Component) {
         src: "https://code.jquery.com/jquery-2.1.1.min.js"
       }), external__react__default.a.createElement("script", {
         src: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"
-      }), external__react__default.a.createElement("script", {
-        src: "path/to/your/bundle.js"
       }));
     }
   }]);

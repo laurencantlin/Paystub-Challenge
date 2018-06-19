@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
           <script
             src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
-          <script src="path/to/your/bundle.js"></script>
+          {/* <script src="path/to/your/bundle.js"></script> */}
         </Head>
         <body>
           <Main/>

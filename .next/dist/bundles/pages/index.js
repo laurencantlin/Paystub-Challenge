@@ -218,6 +218,11 @@ function (_React$Component) {
       enumerable: true,
       writable: true,
       value: function value(_value6, setPeriodStart) {
+        console.log(_value6); // let start=value.split(",").join("").split(" ")   
+        // console.log(start, `${start[0]} ${start[1]} ${start[2]}`)
+        // let startD = new Date(`${start[0]} ${start[1]} ${start[2]}`)   
+        // console.log(startD)
+
         _this.setState({
           PeriodStart: _value6
         }, function () {
@@ -270,7 +275,7 @@ function (_React$Component) {
           max: "12",
           placeholder: "%",
           step: "1",
-          maxlength: "2",
+          maxLength: "2",
           onChange: function onChange(event) {
             return _this2.handleSuperChange(event.target.value, context.methods.setSuper);
           }

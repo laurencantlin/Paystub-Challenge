@@ -7,7 +7,8 @@ import Wrapper from '../components/Wrapper';
 import Stub from '../components/Stub'
 class Paystub extends Component {
     componentDidMount() {
-        console.log("paytstubpage mounted",this.state)
+        console.log("paytstubpage mounted",this)
+        
       }
       componentDidUpdate() {
         console.log(this.state)

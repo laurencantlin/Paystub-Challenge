@@ -1,40 +1,43 @@
 import Link from 'next/link'
 import {Row, Button, Input} from 'react-materialize'
 import MyContext from '../config/Context';
-import MyProvider from '../provider/ContextProvider'
+// import MyProvider from '../provider/ContextProvider'
 import Router from 'next/router'
 
 class EmployeeForm extends React.Component {
     state={     
-      name:'wes',
-      fn: 'fn',
-      ln: 'ln',    
-      AnnualSalary: 0,
-    Super: 0,       
-    PeriodStart: "mmddyyyy",     age: 100,     cool: true }
-  // state = {
-  //   input: this.DEFAULT
-  // };
+      name:null,
+      fn: null,
+      ln: null,    
+      AnnualSalary: null,
+      Super: null,       
+      PeriodStart: null,     
+    }
   componentDidMount() {
-    console.log("form component mounted")
+    // console.log("form component mounted")
   }
 
   componentDidUpdate() {
     console.log("Form component updated:", this.state )
+    // this.calculatePaystub()
   }
 
   handleSubmit=(event, value, setName)=> {
-    console.log(this.state.MyContext)
     event.preventDefault();
 
-   Router.push('/Paystub')
+    if(this.state.fn&&this.state.ln&&this.state.AnnualSalary&&this.state.Super&&this.state.PeriodStart){
+      console.log(this.state, "sub")
+      event.preventDefault();
+     Router.push('/Paystub')
+    }
+    else{alert("fill out all fields")}
   }
-  // handleKeyPress(value, setName) {
-  //   this.setState({
-  //     input: value
-  //   }, () => setName(this.state.input))
-  // }
+ 
+  // calculatePaystub = () => {
+  //   console.log("calc",this.state)
+  //   return <div>hi</div>
 
+  // }
   handlefnChange = (value, setFN) => {
     // console.log(e.target.value)
     this.setState({
@@ -81,21 +84,21 @@ class EmployeeForm extends React.Component {
                   age {context.state.age}
                   <Button onClick={context.methods.increaseAge}>🔼</Button>
                   {/* {({submitForm}) => ( */
-                }  */}
+                } 
                 < form onSubmit = {
                   this.handleSubmit
                 } > 
                 <Row>
-                  <Input placeholder="John" s={12} onChange= {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
-                  <Input placeholder="Smith" s={12} label="Last Name" onChange= {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
-                  <Input s={12} type ="number" label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
-                  <Input label="Super Rate" s={12} placeholder="%" onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
-                  {/* <Input
+                  <Input placeholder="John" required	 s={12} onChange= {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
+                  <Input placeholder="Smith" required	 s={12} label="Last Name" onChange= {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
+                  <Input required	 s={12} type ="number" label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
+                  <Input required	 label="Super Rate" type="number" s={12} min='0' max='100'placeholder="%" step="1" onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
+                  <Input required	
                     placeholder="Pick Date"
-                    type="date"
+                    type="date" 
                     label="Pay Period Start Date"
                     s={12}
-                    onChange= {event => this.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart)}/> */}
+                    onChange= {event => this.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart)}/>
 
                   <Button  onClick={(event) => this.handleSubmit(event, event.target.value, context.methods.setName)} waves='light'>Submit</Button>
                   {/* <Input */}

@@ -14,7 +14,7 @@ class Home extends React.Component {
 
     return (
       <div>
-        <Head>
+        {/* <Head>
           <title>Form</title>
           <link
             rel="stylesheet"
@@ -24,7 +24,7 @@ class Home extends React.Component {
             rel="stylesheet"/>
 
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-        </Head>
+        </Head> */}
         <Hero>
           <div className="columns is-centered">
             <div className="column is-half ">
@@ -35,10 +35,10 @@ class Home extends React.Component {
           </div>
         </Hero>
         <div className="container"></div>
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        {/* <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-        <script src="path/to/your/bundle.js"></script>
+        <script src="path/to/your/bundle.js"></script> */}
 
       </div>
     )

@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -84,12 +84,6 @@ module.exports = require("next/link");
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-materialize");
-
-/***/ }),
-/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -101,6 +95,12 @@ var MyContext = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext();
 /* harmony default export */ __webpack_exports__["a"] = (MyContext);
 
 /***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-materialize");
+
+/***/ }),
 /* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -109,10 +109,10 @@ var MyContext = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_materialize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_Context__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_next_router__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_Context__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_next_router__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_next_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_next_router__);
 
 
@@ -324,15 +324,10 @@ function (_React$Component) {
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = require("moment");
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
 module.exports = require("next/router");
 
 /***/ }),
+/* 6 */,
 /* 7 */
 /***/ (function(module, exports) {
 
@@ -347,7 +342,7 @@ module.exports = require("next/head");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_materialize__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Form__ = __webpack_require__(4);
 
@@ -414,9 +409,11 @@ function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_materialize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Form__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_Context__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Form__ = __webpack_require__(4);
+throw new Error("Cannot find module \"../provider/ContextProvider\"");
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -432,6 +429,8 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
 
 
 
@@ -461,248 +460,38 @@ function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Wrapper);
 
 /***/ }),
-/* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_materialize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_Context__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_moment__);
-
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-
-
-
-
-
-var Slip =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(Slip, _React$Component);
-
-  function Slip() {
-    var _ref;
-
-    var _temp, _this;
-
-    _classCallCheck(this, Slip);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_ref = Slip.__proto__ || Object.getPrototypeOf(Slip)).call.apply(_ref, [this].concat(args))), Object.defineProperty(_assertThisInitialized(_this), "renderDate", {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function value(cts) {
-        console.log("cts", __WEBPACK_IMPORTED_MODULE_4_moment___default()(cts).format('ll'));
-        var formattedDate = __WEBPACK_IMPORTED_MODULE_4_moment___default()(cts).format('ll');
-        return formattedDate;
-      }
-    }), Object.defineProperty(_assertThisInitialized(_this), "renderName", {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function value(fn, ln) {
-        var employeeName = "".concat(fn.charAt(0).toUpperCase()).concat(fn.slice(1), " ").concat(ln.charAt(0).toUpperCase()).concat(ln.slice(1), " ");
-        console.log(_this.state); // this.setState({employeeName:employeeName})
-
-        return employeeName;
-      }
-    }), Object.defineProperty(_assertThisInitialized(_this), "renderGross", {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function value(income) {
-        console.log(income);
-        var Gross = Math.floor(income / 12);
-        return Gross;
-      }
-    }), Object.defineProperty(_assertThisInitialized(_this), "renderIncomeTax", {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function value(income, brackets) {
-        var incomeTax;
-        var Brackets = brackets.forEach(function (bracket) {
-          if (bracket.startingAt < income && income < bracket.upto) {
-            console.log("mybracket is", bracket);
-            incomeTax = Math.floor((bracket.baseTax + bracket.taxRate * (income - bracket.startingAt)) / 12);
-            console.log(incomeTax);
-          }
-        });
-        return incomeTax;
-      }
-    }), Object.defineProperty(_assertThisInitialized(_this), "renderNetIncome", {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function value(tax, gross) {
-        console.log(tax, gross);
-        var NetIncome = gross - tax;
-        return NetIncome;
-      }
-    }), Object.defineProperty(_assertThisInitialized(_this), "renderSuper", {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function value(gross, supr) {
-        var suprRate = supr / 100;
-        console.log(gross, suprRate);
-        var Supr = gross * suprRate; // const Gross = income / 12 return Gross
-
-        return Supr;
-      }
-    }), _temp));
-  }
-
-  _createClass(Slip, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log(this.state);
-      this.renderDate();
-      this.renderGross();
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      console.log(this.state);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__config_Context__["a" /* default */].Consumer, null, function (context) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-          className: "container"
-        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_materialize__["Table"], null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("thead", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th", {
-          "data-field": "id"
-        }, _this2.renderName(context.state.fn, context.state.ln)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("th", {
-          "data-field": "Pay Period",
-          className: "has-text-right"
-        }, _this2.renderDate(context.state.PeriodStart), "- ", _this2.renderDate(context.state.PeriodEnd)))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tbody", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
-          "data-field": "id"
-        }, "Annual Income:  "), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
-          "data-field": "Pay Period",
-          className: "has-text-right"
-        }, "$", context.state.AnnualSalary)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null)), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Gross Income:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
-          className: "has-text-right"
-        }, "$", _this2.renderGross(context.state.AnnualSalary), " monthly")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Income Tax:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
-          className: "has-text-right"
-        }, "- $", _this2.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets), " monthly")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Net Income:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
-          className: "has-text-right"
-        }, "$", _this2.renderNetIncome(_this2.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets), _this2.renderGross(context.state.AnnualSalary)), " monthly")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("tr", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", null, "Super Amount:"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("td", {
-          className: "has-text-right"
-        }, "$", _this2.renderSuper(_this2.renderGross(context.state.AnnualSalary), context.state.Super)))))));
-      });
-    }
-  }]);
-
-  return Slip;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component); // const WrappedHorizontalLoginForm = Form.create()(EmployeeForm);
-// ReactDOM.render(<WrappedHorizontalLoginForm />, mountNode); const
-// WrappedHorizontalLoginForm = Form.create()(EmployeeForm);
-// ReactDOM.render(<WrappedHorizontalLoginForm />, mountNode);
-
-
-/* harmony default export */ __webpack_exports__["a"] = (Slip);
-
-/***/ }),
+/* 10 */,
 /* 11 */,
 /* 12 */,
 /* 13 */,
 /* 14 */,
 /* 15 */,
 /* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(20);
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
-/* 20 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_head__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_head__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Form__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Hero__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Wrapper__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_Context__ = __webpack_require__(2);
+throw new Error("Cannot find module \"../provider/ContextProvider\"");
 
-// EXTERNAL MODULE: external "react"
-var external__react_ = __webpack_require__(0);
-var external__react__default = /*#__PURE__*/__webpack_require__.n(external__react_);
 
-// EXTERNAL MODULE: external "next/link"
-var link_ = __webpack_require__(1);
-var link__default = /*#__PURE__*/__webpack_require__.n(link_);
-
-// CONCATENATED MODULE: ./components/Header.js
-
-
-var linkStyle = {
-  marginRight: 15
-};
-
-var Header_Header = function Header() {
-  return external__react__default.a.createElement("div", null, external__react__default.a.createElement(link__default.a, {
-    href: "/"
-  }, external__react__default.a.createElement("a", {
-    style: linkStyle
-  }, "Home")), external__react__default.a.createElement(link__default.a, {
-    href: "/about"
-  }, external__react__default.a.createElement("a", {
-    style: linkStyle
-  }, "About")), external__react__default.a.createElement("div", {
-    className: "field"
-  }, external__react__default.a.createElement("label", {
-    className: "label"
-  }, "Name"), external__react__default.a.createElement("div", {
-    className: "control"
-  }, external__react__default.a.createElement("input", {
-    className: "input",
-    type: "text",
-    placeholder: "Text input"
-  }))));
-};
-
-/* harmony default export */ var components_Header = (Header_Header);
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__(7);
-var head__default = /*#__PURE__*/__webpack_require__.n(head_);
-
-// EXTERNAL MODULE: ./components/Hero.js
-var Hero = __webpack_require__(8);
-
-// EXTERNAL MODULE: ./components/Table.js
-var Table = __webpack_require__(10);
-
-// EXTERNAL MODULE: ./components/Wrapper.js
-var Wrapper = __webpack_require__(9);
-
-// CONCATENATED MODULE: ./pages/Paystub.js
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -724,68 +513,38 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Paystub_Paystub =
+
+
+var Home =
 /*#__PURE__*/
-function (_Component) {
-  _inherits(Paystub, _Component);
+function (_React$Component) {
+  _inherits(Home, _React$Component);
 
-  function Paystub() {
-    _classCallCheck(this, Paystub);
+  function Home() {
+    _classCallCheck(this, Home);
 
-    return _possibleConstructorReturn(this, (Paystub.__proto__ || Object.getPrototypeOf(Paystub)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
   }
 
-  _createClass(Paystub, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log("paytstubpage mounted", this);
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      console.log(this.state);
-    }
-  }, {
-    key: "handleChange",
-    value: function handleChange(event) {
-      this.setState({
-        value: event.target.value
-      });
-    }
-  }, {
+  _createClass(Home, [{
     key: "render",
     value: function render() {
-      return external__react__default.a.createElement("div", null, external__react__default.a.createElement(head__default.a, null, external__react__default.a.createElement("title", null, "Form"), external__react__default.a.createElement("link", {
-        rel: "stylesheet",
-        href: "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"
-      }), external__react__default.a.createElement("link", {
-        href: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css",
-        rel: "stylesheet"
-      }), external__react__default.a.createElement("meta", {
-        name: "viewport",
-        content: "initial-scale=1.0, width=device-width"
-      })), external__react__default.a.createElement(Hero["a" /* default */], null, external__react__default.a.createElement("div", {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Hero__["a" /* default */], null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "columns is-centered"
-      }, external__react__default.a.createElement("div", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "column is-half "
-      }, external__react__default.a.createElement("div", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "box"
-      }, external__react__default.a.createElement(Wrapper["a" /* default */], null, external__react__default.a.createElement(Table["a" /* default */], null)))))), external__react__default.a.createElement("div", {
+      })))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "container"
-      }), external__react__default.a.createElement("script", {
-        src: "https://code.jquery.com/jquery-2.1.1.min.js"
-      }), external__react__default.a.createElement("script", {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"
-      }), external__react__default.a.createElement("script", {
-        src: "path/to/your/bundle.js"
       }));
     }
   }]);
 
-  return Paystub;
-}(external__react_["Component"]);
+  return Home;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
-/* harmony default export */ var pages_Paystub = __webpack_exports__["default"] = (Paystub_Paystub);
+/* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ })
 /******/ ]);

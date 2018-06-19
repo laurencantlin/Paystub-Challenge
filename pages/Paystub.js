@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Hero from '../components/Hero';
 import Slip from '../components/Table';
 import Wrapper from '../components/Wrapper';
-import Stub from '../components/Stub'
 class Paystub extends Component {
     componentDidMount() {
         console.log("paytstubpage mounted",this)

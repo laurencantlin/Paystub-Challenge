@@ -11,10 +11,19 @@ import Context from '../config/Context';
 import ContextProvider from '../provider/ContextProvider'
 import Slip from '../components/Table';
 import Test from '../components/Test';
+import MyContext from '../config/Context';
+import MyProvider from '../provider/ContextProvider';
 
 class Index extends React.Component {
-
+  componentDidMount() {
+    console.log("indexpage mounted", ContextProvider, MyContext)
+  }
+  // componentDidUpdate() {
+  //   console.log("indexpage updated:",this.state, )
+  // }
+  
   render() {
+    // const {Component, pageProps} = this.props;
 
     return (
       <div>
@@ -34,12 +43,9 @@ class Index extends React.Component {
           <div className="columns is-centered">
             <div className="column is-half ">
               <div className="box">
-                <Wrapper>
-                  <EmployeeForm></EmployeeForm>
-                </Wrapper>
-                <Test></Test>
-
+            <EmployeeForm ></EmployeeForm>
               </div>
+            
             </div>
           </div>
         </Hero>

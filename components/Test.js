@@ -7,23 +7,21 @@ import Router from 'next/router'
 class Test extends React.Component {
   //   state={     name:'wes',     FN: 'fn',     LN: 'ln',     AnnualSalary: 0,
   // SuperRate: 0,     PayPeriodStart: "mmddyyyy",     age: 100,     cool: true }
-  state = {
-    // input: this.DEFAULT
-  };
+  // state = {
+  //   input: this.DEFAULT
+  // };
   componentDidMount() {
-    console.log(this.state)
+    console.log("test component mounted")
   }
   componentDidUpdate() {
-    console.log(this.state)
+    console.log("test component updated", this.state)
   }
-  
 
-  handleSubmit=(event, value, setName)=> {
-    console.log(this.state.MyContext)
+  handleSubmit = (event, value, setName) => {
+    console.log(this.state)
     event.preventDefault();
-    const newState=this.state
 
-   Router.push('/Paystub')
+    Router.push('/Paystub')
   }
   handleKeyPress(value, setName) {
     this.setState({
@@ -65,51 +63,74 @@ class Test extends React.Component {
 
     return (
       <MyContext.Consumer>
-        {/* {({newPaystub})=>()} */}
-        {(context) => (
+      {(context) => (
           <React.Fragment>
-            <div>fn: {context.state.fn} ,<br/>
-              ln: {context.state.ln} ,<br/>
-              AnnualSalary: {context.state.AnnualSalary} ,<br/>
-              Super: {context.state.Super} ,<br/>
-              PeriodStart: {context.state.PeriodStart} ,<br/>
+            <div>
+              fn: {context.state.fn}
+              ,<br/>
+              ln: {context.state.ln}
+              ,<br/>
+              AnnualSalary: {context.state.AnnualSalary}
+              ,<br/>
+              Super: {context.state.Super}
+              ,<br/>
+              PeriodStart: {context.state.PeriodStart}
+              ,<br/>
               age {context.state.age}
               <Button onClick={context.methods.increaseAge}>🔼</Button>
               {/* {({submitForm}) => ( */
-            } 
-            < form onSubmit = {
+            } < form onSubmit = {
               this.handleSubmit
-            } > 
-            <Row>
-              <Input placeholder="John" s={12} onChange= {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
-              <Input placeholder="Smith" s={12} label="Last Name" onChange= {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
-              <Input s={12} type ="number" label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
-              <Input label="Super Rate" s={12} placeholder="%" onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
+            } > <Row>
+              <Input
+                placeholder="John"
+                s={12}
+                onChange=
+                {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
+              <Input
+                placeholder="Smith"
+                s={12}
+                label="Last Name"
+                onChange=
+                {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
+              <Input
+                s={12}
+                type="number"
+                label="Annual Salary"
+                placeholder="$"
+                onChange=
+                {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
+              <Input
+                label="Super Rate"
+                s={12}
+                placeholder="%"
+                onChange=
+                {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
               <Input
                 placeholder="Pick Date"
                 type="date"
                 label="Pay Period Start Date"
                 s={12}
-                onChange= {event => this.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart)}/>
+                onChange=
+                {event => this.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart)}/>
 
-              <Button  onClick={event => this.handleSubmit(event, event.target.value, context.methods.setName)} waves='light'>Submit</Button>
+              <Button
+                onClick={event => this.handleSubmit(event, event.target.value, context.methods.setName)}
+                waves='light'>Submit</Button>
               <Input
                 type="text"
                 value={this.state.input}
                 onChange={event => this.handleKeyPress(event.target.value, context.methods.setName)}
-                placeholder="Change name..."/> 
+                placeholder="Change name..."/>
 
             </Row> 
             </form>
            
-            </div>
-
-          </React.Fragment>
+            </div > 
+            </React.Fragment>
         )}
-      </MyContext.Consumer>
-
-    );
+            </MyContext.Consumer>
+    )
   }
 }
-
 export default Test

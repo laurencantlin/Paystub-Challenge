@@ -10,7 +10,7 @@ import MyContext from '../config/Context';
 
 class Index extends React.Component {
   componentDidMount() {
-    console.log("indexpage mounted", ContextProvider, MyContext)
+    // console.log("indexpage mounted", ContextProvider, MyContext)
   }
   // componentDidUpdate() {
   //   console.log("indexpage updated:",this.state, )

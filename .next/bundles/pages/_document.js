@@ -453,7 +453,7 @@ var _inherits2 = _interopRequireDefault(__webpack_require__("./node_modules/@bab
 
 var _react = _interopRequireWildcard(__webpack_require__("./node_modules/react/cjs/react.development.js"));
 
-var _propTypes = _interopRequireDefault(__webpack_require__("./node_modules/prop-types/index.js"));
+var _propTypes = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/prop-types/index.js"));
 
 var _htmlescape = _interopRequireDefault(__webpack_require__("./node_modules/htmlescape/htmlescape.js"));
 
@@ -1099,7 +1099,7 @@ function invariant(condition, message) {
     throw new Error('StyleSheet: ' + message + '.');
   }
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/node-libs-browser/node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -1724,12 +1724,6 @@ function (_Document) {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
-        }
-      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
-        src: "path/to/your/bundle.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
         __source: {

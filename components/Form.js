@@ -38,6 +38,11 @@ class EmployeeForm extends React.Component {
     }, () => setSuper(this.state.Super))
   }
   handlePeriodStartChange = (value, setPeriodStart) => {
+    console.log(value)
+    // let start=value.split(",").join("").split(" ")   
+    // console.log(start, `${start[0]} ${start[1]} ${start[2]}`)
+    // let startD = new Date(`${start[0]} ${start[1]} ${start[2]}`)   
+    // console.log(startD)
     this.setState({
       PeriodStart: value
     }, () => setPeriodStart(this.state.PeriodStart))
@@ -56,7 +61,7 @@ class EmployeeForm extends React.Component {
                   <Input placeholder="John" required 	 s={12} onChange= {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
                   <Input placeholder="Smith" required s={12} label="Last Name" onChange= {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
                   <Input required	 s={12} type ="number" step='5000' label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
-                  <Input required	 label="Super Rate" type="number" s={12} min='0' max='12' placeholder="%" step="1" maxlength='2' onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
+                  <Input required	 label="Super Rate" type="number" s={12} min='0' max='12' placeholder="%" step="1" maxLength='2' onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
                   <Input required	
                     placeholder="Pick Date"
                     type="date" 

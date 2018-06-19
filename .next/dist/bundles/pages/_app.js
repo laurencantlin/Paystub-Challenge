@@ -219,19 +219,24 @@ function (_App) {
           });
         },
         setPeriodStart: function setPeriodStart(value) {
+          console.log("std", value, value.split(",").join("").split(" ")); // this.setState({PeriodStart: value})
+
           var start = value.split(",").join("").split(" ");
-          var startD = new Date(start[0] + start[1] + start[2]);
+          console.log(start, "2", "".concat(start[0], " ").concat(start[1], " ").concat(start[2]));
+          var startD = new Date("".concat(start[0], " ").concat(start[1], " ").concat(start[2]));
           var endD = new Date(__WEBPACK_IMPORTED_MODULE_3_moment___default()(startD).add(1, 'months').calendar());
-          console.log(startD, endD);
+          console.log(startD, endD, "find");
 
           _this.setState({
-            PeriodStart: startD
-          });
-
-          _this.setState({
+            PeriodStart: startD,
             PeriodEnd: endD
           });
         },
+        // this.setState({PeriodEnd: endD}) setPeriodStart: (value) => {   const start =
+        // value     .split(",")     .join("")     .split(" ")   const startD = new
+        // Date(start[0] + start[1] + start[2])   const endD = new
+        // Date(moment(startD).add(1, 'months').calendar())   console.log(startD, endD)
+        //  this.setState({PeriodStart: value})   // this.setState({PeriodEnd: endD}) },
         setEmployeeName: function setEmployeeName() {
           return _this.setState({
             employeeName: "".concat(_this.state.fn, " ").concat(_this.state.ln)

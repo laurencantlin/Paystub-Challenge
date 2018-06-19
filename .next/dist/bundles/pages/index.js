@@ -698,9 +698,8 @@ function (_React$Component) {
 
   _createClass(Index, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log("indexpage mounted", ContextProvider, __WEBPACK_IMPORTED_MODULE_8__config_Context__["a" /* default */]);
-    } // componentDidUpdate() {
+    value: function componentDidMount() {} // console.log("indexpage mounted", ContextProvider, MyContext)
+    // componentDidUpdate() {
     //   console.log("indexpage updated:",this.state, )
     // }
 

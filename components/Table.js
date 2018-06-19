@@ -4,7 +4,13 @@ import MyContext from '../config/Context'
 import MyProvider from '../provider/ContextProvider'
 
 class Slip extends React.Component {
-
+  componentDidMount() {
+    console.log(this.state)
+  }
+  componentDidUpdate() {
+    console.log(this.state)
+  }
+  
 
   render() {
 
@@ -18,7 +24,7 @@ class Slip extends React.Component {
               <Table>
                 <thead>
                   <tr>
-                    <th data-field="id">{context.state.fn} {context.state.LN}</th>
+                    <th data-field="id">{context.state.fn} {context.state.ln}</th>
                     {/* <th data-field="name"></th> */}
                     <th data-field="Pay Period" className="has-text-right">Pay Period</th>
                   </tr>

@@ -6,7 +6,13 @@ import Slip from '../components/Table';
 import Wrapper from '../components/Wrapper';
 
 class Paystub extends Component {
-    
+    componentDidMount() {
+        console.log(this.state)
+      }
+      componentDidUpdate() {
+        console.log(this.state)
+      }
+      
     handleChange(event) {
         this.setState({value: event.target.value});
       }
@@ -26,8 +32,8 @@ class Paystub extends Component {
     <div className="columns is-centered">
     <div className="column is-half ">
     <div className="box">
-{/* <Slip></Slip> */}
-    <Wrapper><Slip></Slip></Wrapper>
+    {/* <Wrapper><Slip></Slip></Wrapper> */}
+    <Slip></Slip>
     </div>
     </div>
     </div>

@@ -9,16 +9,8 @@ import Slip from '../components/Table';
 import MyContext from '../config/Context';
 
 class Index extends React.Component {
-  componentDidMount() {
-    // console.log("indexpage mounted", ContextProvider, MyContext)
-  }
-  // componentDidUpdate() {
-  //   console.log("indexpage updated:",this.state, )
-  // }
-  
-  render() {
-    // const {Component, pageProps} = this.props;
 
+  render() {
     return (
       <div>
         <Head>
@@ -29,30 +21,23 @@ class Index extends React.Component {
           <link
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
             rel="stylesheet"/>
-
           <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
         </Head>
 
-        <Hero>
+        <Hero title='Employee Details' subtitle='Please fill out the form below'>
           <div className="columns is-centered">
             <div className="column is-half ">
               <div className="box">
-            <EmployeeForm ></EmployeeForm>
+                <EmployeeForm ></EmployeeForm>
               </div>
-            
+
             </div>
           </div>
         </Hero>
-
-        <div className="container"></div>
-
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
         <script src="path/to/your/bundle.js"></script>
-
       </div>
     )
   }

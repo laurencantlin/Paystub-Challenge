@@ -75,7 +75,7 @@ class Slip extends React.Component {
                   </tr>
                   <tr>
                     <td>Income Tax (monthly):</td>
-                    <td className="has-text-right">- ${this.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets)} </td>
+                    <td className="has-text-right">${this.renderIncomeTax(context.state.AnnualSalary, context.state.TaxBrackets)} </td>
                   </tr>
                   <tr>
                     <td>Net Income (monthly): </td>

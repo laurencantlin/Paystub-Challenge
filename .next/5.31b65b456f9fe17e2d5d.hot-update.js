@@ -197,7 +197,6 @@ function (_React$Component) {
           required: true,
           s: 12,
           type: "number",
-          step: "5000",
           label: "Annual Salary",
           placeholder: "$",
           onChange: function onChange(event) {
@@ -512,4 +511,4 @@ exports.Toast = _Toast2.default;
 /***/ })
 
 })
-//# sourceMappingURL=5.2ec9955df011ae89d7d5.hot-update.js.map
+//# sourceMappingURL=5.31b65b456f9fe17e2d5d.hot-update.js.map

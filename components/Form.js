@@ -60,7 +60,7 @@ class EmployeeForm extends React.Component {
                 <Row>
                   <Input placeholder="John" required 	 s={12} onChange= {event => this.handlefnChange(event.target.value, context.methods.setFN)}label="First Name"/>
                   <Input placeholder="Smith" required s={12} label="Last Name" onChange= {event => this.handlelnChange(event.target.value, context.methods.setLN)}/>
-                  <Input required	 s={12} type ="number" step='5000' label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
+                  <Input required	 s={12} type ="number" label="Annual Salary" placeholder="$" onChange= {event => this.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary)}/>
                   <Input required	 label="Super Rate" type="number" s={12} min='0' max='12' placeholder="%" step="1" maxLength='2' onChange= {event => this.handleSuperChange(event.target.value, context.methods.setSuper)}/>
                   <Input required	
                     placeholder="Pick Date"

@@ -28,10 +28,18 @@ class Slip extends React.Component {
   renderIncomeTax = (income, brackets) => {
     let incomeTax;
     const Brackets = brackets.forEach(function (bracket) {
-      if (bracket.startingAt < income && income < bracket.upto) {
-        console.log("mybracket is", bracket)
+      if (bracket.startingAt < income ) {
+        console.log("---mybracket is:", bracket)
         incomeTax = Math.floor((bracket.baseTax + bracket.taxRate * (income - bracket.startingAt)) / 12);
+        console.log("---mybracket is:", bracket)
+        console.log("---mytax is:", incomeTax)
+
       }
+      // if(bracket.startingAt >= income){
+      //   console.log("over 180001")
+      //   incomeTax = Math.floor((bracket.baseTax + bracket.taxRate * (income - bracket.startingAt)) / 12);
+
+      // }
     })
     return incomeTax;
   }

@@ -67,23 +67,52 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
 
-/***/ "./components/Form.js":
+module.exports = require("react");
+
+/***/ }),
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_materialize__ = __webpack_require__("react-materialize");
+ // import {createContext} from 'react'
+
+var MyContext = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext();
+/* harmony default export */ __webpack_exports__["a"] = (MyContext);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-materialize");
+
+/***/ }),
+/* 3 */,
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_materialize__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_materialize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_Context__ = __webpack_require__("./config/Context.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_router__ = __webpack_require__("next/router");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_Context__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_router__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_next_router__);
-var _jsxFileName = "/Users/laurencantlin/Desktop/Code/Paystub-Challenge/components/Form.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -208,45 +237,17 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__config_Context__["a" /* default */].Consumer, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        }
-      }, function (context) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 55
-          }
-        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 56
-          }
-        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
-          onSubmit: _this2.handleSubmit,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 57
-          }
-        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_materialize__["Row"], {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 60
-          }
-        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_materialize__["Input"], {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__config_Context__["a" /* default */].Consumer, null, function (context) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
+          onSubmit: _this2.handleSubmit
+        }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_materialize__["Row"], null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_materialize__["Input"], {
           placeholder: "John",
           required: true,
           s: 12,
           onChange: function onChange(event) {
             return _this2.handlefnChange(event.target.value, context.methods.setFN);
           },
-          label: "First Name",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 61
-          }
+          label: "First Name"
         }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_materialize__["Input"], {
           placeholder: "Smith",
           required: true,
@@ -254,10 +255,6 @@ function (_React$Component) {
           label: "Last Name",
           onChange: function onChange(event) {
             return _this2.handlelnChange(event.target.value, context.methods.setLN);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 62
           }
         }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_materialize__["Input"], {
           required: true,
@@ -267,10 +264,6 @@ function (_React$Component) {
           placeholder: "$",
           onChange: function onChange(event) {
             return _this2.handleAnnualSalaryChange(event.target.value, context.methods.setAnnualSalary);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 63
           }
         }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_materialize__["Input"], {
           required: true,
@@ -284,10 +277,6 @@ function (_React$Component) {
           maxLength: "2",
           onChange: function onChange(event) {
             return _this2.handleSuperChange(event.target.value, context.methods.setSuper);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 64
           }
         }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_materialize__["Input"], {
           required: true,
@@ -297,21 +286,13 @@ function (_React$Component) {
           s: 12,
           onChange: function onChange(event) {
             return _this2.handlePeriodStartChange(event.target.value, context.methods.setPeriodStart);
-          },
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 65
           }
         }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_materialize__["Button"], {
           type: "submit",
           onSubmit: function onSubmit(event) {
             return _this2.handleSubmit(event, event.target.value, context.methods.setName);
           },
-          waves: "light",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 72
-          }
+          waves: "light"
         }, "Submit")))));
       });
     }
@@ -323,14 +304,18 @@ function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (EmployeeForm);
 
 /***/ }),
+/* 6 */
+/***/ (function(module, exports) {
 
-/***/ "./components/Hero.js":
+module.exports = require("next/router");
+
+/***/ }),
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "/Users/laurencantlin/Desktop/Code/Paystub-Challenge/components/Hero.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -362,41 +347,16 @@ function (_React$Component) {
     key: "render",
     value: function render(props) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
-        className: "hero is-fullheight is-primary",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 5
-        }
+        className: "hero is-fullheight is-primary"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "hero-body has-text-centered is-centered",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 6
-        }
+        className: "hero-body has-text-centered is-centered"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "container",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 7
-        }
+        className: "container"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
-        className: "title",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
-        }
+        className: "title"
       }, this.props.title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h2", {
-        className: "subtitle",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      }, this.props.subtitle), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      }), " ", this.props.children)));
+        className: "subtitle"
+      }, this.props.subtitle), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null), " ", this.props.children)));
     }
   }]);
 
@@ -406,33 +366,31 @@ function (_React$Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Hero);
 
 /***/ }),
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ "./config/Context.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+module.exports = __webpack_require__(16);
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
- // import {createContext} from 'react'
-
-var MyContext = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createContext();
-/* harmony default export */ __webpack_exports__["a"] = (MyContext);
 
 /***/ }),
-
-/***/ "./pages/index.js":
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__("next/head");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_head___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_head__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Form__ = __webpack_require__("./components/Form.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Hero__ = __webpack_require__("./components/Hero.js");
-var _jsxFileName = "/Users/laurencantlin/Desktop/Code/Paystub-Challenge/pages/index.js";
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Form__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Hero__ = __webpack_require__(7);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -466,90 +424,30 @@ function (_React$Component) {
   _createClass(Index, [{
     key: "render",
     value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_head___default.a, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        }
-      }, "index"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_head___default.a, null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("title", null, "index"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
         rel: "stylesheet",
-        href: "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        }
+        href: "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("link", {
         href: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css",
-        rel: "stylesheet",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        }
+        rel: "stylesheet"
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("meta", {
         name: "viewport",
-        content: "initial-scale=1.0, width=device-width",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        }
+        content: "initial-scale=1.0, width=device-width"
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Hero__["a" /* default */], {
         title: "Employee Details",
-        subtitle: "Please fill out the form below",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        }
+        subtitle: "Please fill out the form below"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "columns is-centered",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        }
+        className: "columns is-centered"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "column is-half ",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        }
+        className: "column is-half "
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        className: "box",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Form__["a" /* default */], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        }
-      }))))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
-        src: "https://code.jquery.com/jquery-2.1.1.min.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        }
+        className: "box"
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Form__["a" /* default */], null))))), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
+        src: "https://code.jquery.com/jquery-2.1.1.min.js"
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        }
+        src: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("script", {
-        src: "path/to/your/bundle.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        }
+        src: "path/to/your/bundle.js"
       }));
     }
   }]);
@@ -559,43 +457,5 @@ function (_React$Component) {
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
-/***/ }),
-
-/***/ 3:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("./pages/index.js");
-
-
-/***/ }),
-
-/***/ "next/head":
-/***/ (function(module, exports) {
-
-module.exports = require("next/head");
-
-/***/ }),
-
-/***/ "next/router":
-/***/ (function(module, exports) {
-
-module.exports = require("next/router");
-
-/***/ }),
-
-/***/ "react":
-/***/ (function(module, exports) {
-
-module.exports = require("react");
-
-/***/ }),
-
-/***/ "react-materialize":
-/***/ (function(module, exports) {
-
-module.exports = require("react-materialize");
-
 /***/ })
-
-/******/ });
-//# sourceMappingURL=index.js.map
+/******/ ]);

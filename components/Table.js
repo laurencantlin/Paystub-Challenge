@@ -35,11 +35,7 @@ class Slip extends React.Component {
         console.log("---mytax is:", incomeTax)
 
       }
-      // if(bracket.startingAt >= income){
-      //   console.log("over 180001")
-      //   incomeTax = Math.floor((bracket.baseTax + bracket.taxRate * (income - bracket.startingAt)) / 12);
-
-      // }
+   
     })
     return incomeTax;
   }
